@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CartiController">
+   <children>
+      <Label layoutX="104.0" layoutY="53.0" text="Imprumutare/Returnare carti">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fieldTitlu" layoutX="143.0" layoutY="125.0" promptText="titlu" />
+      <TextField fx:id="fieldAutor" layoutX="143.0" layoutY="175.0" promptText="autor" />
+      <TextField fx:id="fieldEditura" layoutX="143.0" layoutY="229.0" promptText="editura" />
+      <Button layoutX="235.0" layoutY="308.0" mnemonicParsing="false" onAction="#onReturnareButtonClick" text="Returnare" />
+      <Button layoutX="397.0" layoutY="308.0" mnemonicParsing="false" onAction="#onCautaButtonClick" text="Cauta" />
+      <TableView fx:id="tableCarti" layoutX="420.0" layoutY="75.0" prefHeight="200.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="columnTitlu" prefWidth="75.0" text="titlu" />
+          <TableColumn fx:id="columnAutor" prefWidth="75.0" text="autor" />
+            <TableColumn fx:id="columnEditura" prefWidth="75.0" text="editura" />
+            <TableColumn fx:id="columnStatus" prefWidth="75.0" text="status" />
+        </columns>
+      </TableView>
+      <Button layoutX="131.0" layoutY="308.0" mnemonicParsing="false" onAction="#onImprumutareButtonClick" text="Imprumutare" />
+   </children>
+</AnchorPane>
